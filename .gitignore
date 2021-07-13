@@ -1,0 +1,5 @@
+node_modules
+variables.env
+public/uploads/grupos/*
+public/uploads/perfiles/*
+config/bd.js

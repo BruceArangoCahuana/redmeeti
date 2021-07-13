@@ -1,0 +1,16 @@
+<main class="contenedor contenedor-formularios">
+    <h1><%- nombrePagina %></h1>
+    <form action="/iniciar-sesion" method="POST" class="default-form">
+        <div class="campo">
+            <label>Correo:</label>
+            <input type="email" name="email" placeholder="Tu correo">
+        </div>
+        <div class="campo">
+            <label>Contraseña:</label>
+            <input type="password" name="password" placeholder="Tu contraseña">
+        </div>
+        <div class="campo enviar">
+            <input type="submit" value="Iniciar session" class="btn btn-rosa">
+        </div>
+    </form>
+</main>

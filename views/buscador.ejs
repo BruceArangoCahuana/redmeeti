@@ -1,0 +1,43 @@
+<div class="contenedor proximos-eventos">
+    <h1><%= nombrePagina %></h1>
+    <% if(meeti.length > 0){ %>
+        <div class="grid columnas-md-3">
+            <% meeti.forEach(meetis =>{ %>
+                <div class="card">
+                    <% if(meetis.grupo.imagen){%>
+                        <img src="/uploads/grupoS/<%= meetis.grupo.imagen %>" alt="">
+                    <% }else{ %>
+                        <img src="/img/meeti.jpg" alt="">
+                    <% } %>
+                    
+                    <div class="card-texto">
+                    <% moment.locale('es'); %>
+                    <% const fechas =`${meetis.fecha}` %>
+                    <p class="fecha">Fecha: <%= moment(fechas).format('LL') %></p>
+                    <p class="fecha">Hora: <%= meetis.hora %></p>
+                    <a href="/meeti/<%= meetis.slug %>">
+                        <h3><%= meetis.titulo %></h3>
+                    </a>
+                    <div class="info-autor">
+                        <% if(meetis.usuario.imagen){ %>
+                            <div class="imagen">
+                                <img src="/uploads/perfiles/<%= meetis.usuario.imagen %>">
+                            </div>
+                        <% }else{ %> 
+                            <div class="imagen">
+                            </div>
+                        <% } %>
+                    
+                        <div class="informacion">
+                            <p>Organizado por:</p>
+                            <p class="autor"><%= meetis.usuario.nombre %></p>
+                        </div>
+                    </div>
+
+                </div>
+            <% }) %>
+        </div>
+    <% }else{ %>
+        <p>No hay resultado</p>
+    <% } %>
+</div>
