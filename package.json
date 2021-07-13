@@ -6,7 +6,7 @@
   "scripts": {
     "desarrollo":"concurrently \"npm run dev \" \"npm run watch\"",
     "dev": "nodemon ./index.js",
-    "start": "nodeb ./index.js",
+    "start": "node ./index.js",
     "watch": "webpack -w --mode development"
   },
   "author": "Brandon Bruce Arango",

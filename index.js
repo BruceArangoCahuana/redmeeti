@@ -73,6 +73,7 @@ app.use('/',router());
 const host = process.env.HOST || '0.0.0.0';
 const port = process.env.PORT || 5000;
 //le damos el puerto
+//cambio
 app.listen(port,host,()=>{
-    console.log("Servidor todo listo...!");
+    console.log("Servidor todo listo...! para funcionar");
 });
